@@ -1,0 +1,614 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ******* Header ******************* */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.logo-head {
+    width: Hug (161.09px)px;
+    height: Hug (79px)px;
+    padding: 30px 50px 30px 50px;
+    gap: 10px;
+    opacity: 0px;
+
+}
+
+.logo-head img {
+    width: 61.09px;
+    height: 19px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+nav {
+    width: 244px;
+    height: 35px;
+    gap: 68px;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    position: relative;
+
+}
+
+nav button:hover {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+nav button:hover::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background-color: var(--main-color);
+    transform: translateY(-50px);
+    transition: 0.3s;
+}
+
+
+
+/* ************titre****************** */
+.Info-group {
+    padding-left: 5px;
+}
+
+.headline h1 {
+    font-style: 22px;
+}
+
+.headline p {
+    font-size: 16px;
+}
+
+.Search-bar {
+    display: flex;
+    border-radius: 15px
+}
+
+.search-bar-contener {
+    display: flex;
+    border: 1px black;
+    border-radius: 15px;
+    width: Fixed (377px)px;
+    height: Fixed (49px)px;
+    gap: 24px;
+    border-radius: 15px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(242, 242, 242, 1)
+}
+
+.search-bar-contener button {
+    width: 50px;
+    height: 49px;
+    gap: 0px;
+    border-radius: 15px 0px 0px 15px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid rgba(242, 242, 242, 1)
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+input:hover {
+    border: none;
+}
+
+input::placeholder {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+input:nth-child(2) {
+    padding: 15px 16px 15px 16px;
+    gap: 10px;
+    border-radius: 0px 15px 15px 0px;
+    background: rgba(0, 101, 252, 1);
+    border: 1px solid rgba(0, 101, 252, 1);
+    color: white;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.search-bar-contener .fa-solid {
+    color: rgba(0, 0, 0, 1);
+
+}
+
+.recherche-container::placeholder {
+    color: black;
+}
+
+
+.filterbar {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.filterbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.filterbar button {
+    border-radius: 25px;
+    border: 2px solid #D9D9D9;
+    padding: 4px 19px 4px 19px;
+    gap: 10px;
+    margin: 0 5px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+
+.filterbar button:hover {
+    background-color: #DEEBFF;
+    transition: 0.2s;
+}
+
+.filterbar p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+
+}
+
+.filterbar i {
+    width: 22px;
+    height: 22px;
+    color: var(--main-color);
+}
+
+.infobarcontener {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.infobarcontener button {
+    border: 1px solid #D9D9D9;
+    background-color: white;
+    border-radius: 200px;
+}
+
+
+/* ********Main Body********* */
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+    padding: 0 0 20px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+
+
+.offers {
+    display: flex;
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+
+
+.offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.offers-container img {
+    width: 240.33px;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+    border: 5px;
+    padding: 5px;
+}
+
+.main-card {
+    padding: 0 0 15px 0;
+    border-radius: 20px 20px;
+    gap: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.main-c {
+    padding: 0 15px 0 15px;
+    gap: 8px;
+}
+
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/* ***********************Activité à Marseille****************************** */
+.activ-container {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.section-title {
+    padding: 35px 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+    text-align: left;
+}
+
+.farm {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+
+.farm img {
+    width: 297.5px;
+    height: 380px;
+    gap: 0px;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+.activmt {
+    width: Fill (297.5px)px;
+    height: Hug (59px)px;
+    padding: 20px 19px 20px 19px;
+    gap: 10px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+/* *******************************footer********************* */
+.footerc {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(242, 242, 242, 1);
+}
+
+.tf {
+    width: 77px;
+    height: 21px;
+    white-space: nowrap;
+}
+
+.ulc ul {
+    list-style: none;
+    padding: 0 50px 0 0;
+}
+
+.ulc li {
+    padding: 7px 0;
+}
+
+.ulc button {
+    border: none;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+
+
+
+
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    .farm {
+        width: 193.5px;
+        gap: 0px;
+        border-radius: 20px 20px 0px 0px;
+        opacity: 0px;
+
+    }
+
+    .farm img {
+        width: 193.5px;
+        height: 200px;
+        gap: 0px;
+        border-radius: 20px 20px 0px 0px;
+        opacity: 0px;
+
+    }
+
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    /* ... */
+    .main-container {
+        width: 375px;
+        height: 4058.02px;
+        top: 188px;
+        gap: 0px;
+        opacity: 0px;
+
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        transform: translateX(-18%)
+    }
+
+    nav button:hover {
+        color: var(--main-color);
+        transition: 0.3s;
+    }
+
+    nav button:hover::before {
+        content: "";
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        background-color: var(--main-color);
+        transform: translateY(30px);
+        transition: 0.3s;
+    }
+
+    .Search-bar {
+        display: block;
+        margin: auto;
+        white-space: nowrap;
+
+
+    }
+
+    .search-bar-contener {
+        justify-content: center;
+        border: none;
+    }
+
+    .Info-group section {
+        width: Fill (162.5px)px;
+        height: Fixed (50px)px;
+        padding: 4px 19px 4px 19px;
+        gap: 10px;
+        border-radius: 25px 0px 0px 0px;
+        border: 2px 0px 0px 0px;
+        opacity: 0px;
+
+    }
+
+    .filterbar {
+        flex-wrap: wrap;
+    }
+
+    .filterbar ul {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .btnc {
+        display: flex;
+    }
+
+    .btncc {}
+
+    .filterbar li {
+        width: calc(50% - 10px);
+        margin: 0 10px 20px 0;
+        margin-bottom: 20px;
+
+    }
+
+    .filterbar button {
+        margin: 50px 0;
+
+    }
+
+    .infobar {
+        margin: 550px 0 10px 0;
+    }
+
+    main {
+        margin-top: 70px;
+    }
+}
