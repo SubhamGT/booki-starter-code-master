@@ -30,13 +30,12 @@ header {
     justify-content: space-between;
     align-items: center;
 
-
 }
 
 .logo-head {
     width: Hug (161.09px)px;
     height: Hug (79px)px;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 50px 30px 7px;
     gap: 10px;
     opacity: 0px;
 
@@ -98,6 +97,7 @@ nav button:hover::before {
 
 .headline p {
     font-size: 16px;
+    margin-bottom: 40px;
 }
 
 .Search-bar {
@@ -111,7 +111,6 @@ nav button:hover::before {
     border-radius: 15px;
     width: Fixed (377px)px;
     height: Fixed (49px)px;
-    gap: 24px;
     border-radius: 15px 0px 0px 0px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
@@ -129,6 +128,8 @@ nav button:hover::before {
     border: 1px solid rgba(242, 242, 242, 1)
 }
 
+
+
 input {
     border: none;
     outline: none;
@@ -140,16 +141,18 @@ input:hover {
 
 input::placeholder {
     font-family: Raleway;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 21.13px;
     text-align: center;
+    align-items: center;
     color: rgba(0, 0, 0, 1);
 
 }
 
 input[type="text"]:focus::placeholder {
     color: transparent;
+
 }
 
 input:nth-child(2) {
@@ -181,17 +184,35 @@ input:nth-child(2) {
 
 .filterbar {
     display: flex;
-    align-items: baseline;
-    gap: 15px;
-    height: 50px;
+    align-items: center;
+
     font-size: 17px;
     font-weight: bold;
+    margin-top: 40px;
+}
+
+.bes {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+
 }
 
 .filterbar ul {
     display: flex;
+    align-items: center;
     list-style: none;
+    padding: 4px 19px 4px 0px;
+    gap: 10px;
+    border-radius: 25px 0px 0px 0px;
+    border: 2px 0px 0px 0px;
+    opacity: 0px;
 }
+
+
+
 
 .filterbar button {
     border-radius: 25px;
@@ -224,6 +245,8 @@ input:nth-child(2) {
     height: 22px;
     color: var(--main-color);
 }
+
+
 
 .infobarcontener {
     display: flex;
@@ -377,9 +400,9 @@ a {
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+.card-title {
+    margin-top: 30px;
+    padding: 0 0 0 5px;
 }
 
 .populaires-cards .card-subtitle {
@@ -390,11 +413,14 @@ a {
     margin-bottom: 5px;
 }
 
+
+
 /* ***********************Activité à Marseille****************************** */
+
 .activ-container {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+
     background-color: white;
 }
 
@@ -411,6 +437,7 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -590,7 +617,7 @@ a {
         display: flex;
     }
 
-    .btncc {}
+
 
     .filterbar li {
         width: calc(50% - 10px);
