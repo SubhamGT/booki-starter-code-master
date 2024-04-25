@@ -420,7 +420,6 @@ a {
 .activ-container {
     display: flex;
     justify-content: space-between;
-
     background-color: white;
 }
 
@@ -433,7 +432,7 @@ a {
 }
 
 .farm {
-    background-color: white;
+
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -452,12 +451,16 @@ a {
 .activmt {
     width: Fill (297.5px)px;
     height: Hug (59px)px;
-    padding: 20px 19px 20px 19px;
-    gap: 10px;
+    padding: 0 0 0 19px;
+
     border-radius: 0px 0px 20px 20px;
 }
 
 /* *******************************footer********************* */
+footer {
+    margin: 50px 0 0;
+}
+
 .footerc {
     display: flex;
     justify-content: space-around;
@@ -527,8 +530,7 @@ a {
 
     .farm {
         width: 193.5px;
-        gap: 0px;
-        border-radius: 20px 20px 0px 0px;
+        gap: 20px;
         opacity: 0px;
 
     }
@@ -539,9 +541,24 @@ a {
         gap: 0px;
         border-radius: 20px 20px 0px 0px;
         opacity: 0px;
-
     }
 
+    .activmt {
+        width: 193.5px;
+        height: 70px;
+        padding: 20px 19px 0px 19px;
+        gap: 10px;
+        border-radius: 0px 0px 20px 20px;
+        opacity: 0px;
+    }
+
+    .farmt {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18.78px;
+        text-align: left;
+
+    }
 }
 
 /* Small devices (phones, less than 768px) */
