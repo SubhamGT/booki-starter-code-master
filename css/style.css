@@ -66,6 +66,10 @@ nav button {
     background-color: transparent;
     border: none;
     position: relative;
+    width: 112px;
+    height: 19px;
+
+
 
 }
 
@@ -579,7 +583,9 @@ footer {
     }
 
     nav {
-        transform: translateX(-18%)
+        transform: translateX(-18%);
+        position: relative;
+
     }
 
     nav button:hover {
@@ -589,12 +595,15 @@ footer {
 
     nav button:hover::before {
         content: "";
-        width: 100%;
+        width: 50vw;
         height: 4px;
         position: absolute;
         background-color: var(--main-color);
-        transform: translateY(30px);
+        top: calc(100% + 5px);
         transition: 0.3s;
+        left: -40px;
+        transform: translateY(10px);
+
     }
 
     .Search-bar {
@@ -628,31 +637,5 @@ footer {
     .filterbar ul {
         flex-wrap: wrap;
         width: 100%;
-    }
-
-    .btnc {
-        display: flex;
-    }
-
-
-
-    .filterbar li {
-        width: calc(50% - 10px);
-        margin: 0 10px 20px 0;
-        margin-bottom: 20px;
-
-    }
-
-    .filterbar button {
-        margin: 50px 0;
-
-    }
-
-    .infobar {
-        margin: 550px 0 10px 0;
-    }
-
-    main {
-        margin-top: 70px;
     }
 }
