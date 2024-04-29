@@ -113,8 +113,8 @@ nav button:hover::before {
     display: flex;
     border: 1px black;
     border-radius: 15px;
-    width: Fixed (377px)px;
-    height: Fixed (49px)px;
+    width: 377px;
+    height: 49px;
     border-radius: 15px 0px 0px 0px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
@@ -159,8 +159,8 @@ input[type="text"]:focus::placeholder {
 
 }
 
-input:nth-child(2) {
-    padding: 15px 16px 15px 16px;
+input[type="submit"] {
+    padding: 15px 16px;
     gap: 10px;
     border-radius: 0px 15px 15px 0px;
     background: rgba(0, 101, 252, 1);
@@ -582,60 +582,154 @@ footer {
         flex-direction: column;
     }
 
+
     nav {
         transform: translateX(-18%);
         position: relative;
 
     }
 
-    nav button:hover {
-        color: var(--main-color);
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+    }
+
+
+    nav button {
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        width: 187.5px;
+        height: 19px;
+        gap: 0px;
+        opacity: 0px;
+    }
+
+
+    nav li:first-child::before {
+        content: "";
+        width: 80%;
+        height: 3px;
+        position: absolute;
+        background-color: var(--filter-bg-color);
+        transform: translateY(30px) translateX(-1%) rotate(180deg);
         transition: 0.3s;
     }
 
+    nav li:last-child::before {
+        content: "";
+        width: 80%;
+        height: 3px;
+        position: absolute;
+        background-color: var(--filter-bg-color);
+        transform: translateY(30px) translateX(-1%) rotate(180deg);
+        transition: 0.3s;
+    }
+
+    /* ********c'est pour éfacer le 1er barre ************** */
     nav button:hover::before {
         content: "";
-        width: 50vw;
-        height: 4px;
+        width: 80%;
+        height: 3px;
+        position: absolute;
+        background-color: transparent;
+        transform: translateY(30px) translateX(-1%) rotate(180deg);
+        transition: 0.3s;
+    }
+
+    nav li:hover:first-child::before {
+        content: "";
+        width: 80%;
+        height: 3px;
         position: absolute;
         background-color: var(--main-color);
-        top: calc(100% + 5px);
+        transform: translateY(30px) translateX(-1%) rotate(180deg);
         transition: 0.3s;
-        left: -40px;
-        transform: translateY(10px);
+    }
+
+    nav li:hover:last-child::before {
+        content: "";
+        width: 80%;
+        height: 3px;
+        position: absolute;
+        background-color: var(--main-color);
+        transform: translateY(30px) translateX(-1%) rotate(180deg);
+        transition: 0.3s;
+    }
+
+
+
+
+    .headline h1 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 25.83px;
+        text-align: left;
+    }
+
+    .headline p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.78px;
+        text-align: left;
 
     }
 
-    .Search-bar {
-        display: block;
-        margin: auto;
-        white-space: nowrap;
-
-
+    section .Info-group {
+        margin-top: 30px;
     }
 
+
+    /* **************************** */
     .search-bar-contener {
-        justify-content: center;
-        border: none;
+        text-wrap: nowrap;
     }
 
-    .Info-group section {
-        width: Fill (162.5px)px;
-        height: Fixed (50px)px;
-        padding: 4px 19px 4px 19px;
+    input[name="q"] {
+        font-family: Raleway;
+        font-size: 80%;
+        font-weight: 700;
+        line-height: 21.13px;
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        width: 49px;
+        height: 49px;
+        left: 286px;
+        padding: 17px 17px;
         gap: 10px;
-        border-radius: 25px 0px 0px 0px;
-        border: 2px 0px 0px 0px;
+        border-radius: 15px;
+        border: 1px solid transparent;
         opacity: 0px;
-
+        background: url(./Vector.png) center/30px no-repeat;
+        background-color: #0065FC;
+        background-size: 17px;
+        padding-left: 0;
+        text-indent: -9999px;
     }
 
+    /* ******************** */
     .filterbar {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 
     .filterbar ul {
         flex-wrap: wrap;
-        width: 100%;
     }
+
+    .bes p {
+        width: 54px;
+        height: 21px;
+        gap: 0px;
+        opacity: 0px;
+    }
+
+    .filterbar button {}
+
 }
