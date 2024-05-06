@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -67,12 +68,10 @@ nav ul {
 }
 
 nav button {
-
     background-color: transparent;
     border: none;
     width: 126px;
     font-size: 15px;
-
 }
 
 nav li {
@@ -81,10 +80,14 @@ nav li {
 
 }
 
+nav button:hover {
+    transition: 0.3s;
+    color: var(--main-color);
+}
 
 
 nav li:hover {
-    color: var(--main-color);
+
     transition: 0.3s;
     border-top: 2px solid var(--main-color);
 
@@ -193,33 +196,23 @@ input[type="submit"] {
 .filterbar {
     display: flex;
     align-items: center;
-    font-size: 17px;
+    font-size: 1rem;
     font-weight: bold;
+    width: 100%;
+    height: auto;
     margin-top: 10px;
 }
 
-.bes {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21.13px;
-    text-align: center;
-
-}
 
 .filterbar ul {
     display: flex;
+
     align-items: center;
     list-style: none;
     padding: 4px 19px 4px 0px;
     gap: 10px;
     border-radius: 25px 0px 0px 0px;
-    border: 2px 0px 0px 0px;
-    opacity: 0px;
 }
-
-
-
 
 
 .filterbar button {
@@ -233,6 +226,8 @@ input[type="submit"] {
     font-weight: bold;
     padding: 10px 15px;
     text-wrap: nowrap;
+    width: 200px;
+    min-width: 120px;
 }
 
 
@@ -358,9 +353,7 @@ a {
 .offers-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     grid-template-rows: repeat(2, auto);
-
     gap: 25px;
     justify-content: center;
 
@@ -397,7 +390,7 @@ a {
 /****** Populaires ***********/
 .populaires {
     width: 32%;
-
+    margin: 0 0 0 60px;
 }
 
 .populaires-title {
@@ -429,10 +422,13 @@ a {
 
 .card-title {
     margin-bottom: 10px;
+
 }
 
 .card-subtitle {
+    font-weight: 1rem;
     margin: 0px;
+
 }
 
 .populaires-cards .card-subtitle {
@@ -454,47 +450,49 @@ a {
 .activ-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    justify-items: center;
+    gap: 10px;
+    justify-items: start;
 
 }
 
 .farm {
     border-radius: 20px;
-    /* Masquer le contenu débordant */
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
 }
 
 .ia {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     border-radius: 20px 20px 0px 0px;
 
 }
 
-.activmt {
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 0px 0px 20px 20px;
-
-}
 
 .farm .ia {
     object-fit: center/cover;
-    max-width: 250px;
-    height: 336px;
+    max-width: 255px;
+    height: 352px;
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
 }
 
 
 .activmt {
+    background-color: white;
+    padding: 0 10px 0px 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 30px;
+    font-weight: 100%;
+}
 
-    padding: 0 0 0 19px;
-    border-radius: 0px 0px 20px 20px;
+.activm {
+    max-width: 1200px;
+    /* Vérifiez si cette propriété limite la largeur */
+    margin: 0 auto;
+    /* Assurez-vous que les marges ne restreignent pas la largeur */
 }
 
 /* *******************************footer********************* */
@@ -531,12 +529,15 @@ footer {
 
 
 
-
-
-
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -547,7 +548,7 @@ footer {
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
+        margin: 40px 50px 0 0;
 
     }
 
@@ -569,122 +570,106 @@ footer {
         font-size: 13px;
     }
 
-    .farm {
+    /* **************** */
+    .activ-container {
+        justify-items: normal;
+    }
+
+    .farm .ia {
         width: 100%;
-        /* Largeur pleine sur les écrans plus larges */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centrer horizontalement */
-        gap: 20px;
-        opacity: 1;
+        height: auto;
+        max-width: 250px;
+        height: 230px;
+        border-radius: 5% 5% 0 0;
+
     }
 
     .farm img {
         width: 100%;
-        height: 200px;
-        /* Ajuste automatiquement la hauteur en conservant le ratio */
-        border-radius: 20px 20px 0 0;
+        border-radius: 5% 5% 0 0;
         opacity: 1;
     }
 
     .activmt {
-        width: 100%;
-        padding: 20px 19px 0;
-        border-radius: 0 0 20px 20px;
-        opacity: 1;
+        text-wrap: wrap;
+        border-radius: 0 0 5% 5%;
+        overflow: hidden;
+        min-height: 90px;
+        display: flex;
+        align-items: center;
+
     }
+
+    .bes {
+        width: 0;
+
+    }
+
+    .filterbarc ul {
+        flex-wrap: wrap;
+        padding: 10px 0 0 0;
+        gap: 0;
+
+    }
+
+    .filterbarc li {
+        margin: 0px 10px 25px -5px;
+    }
+
+    .filterbarc {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .filterbarc button {
+        flex-wrap: nowrap;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    .filterbarc p {
+        transform: translateX(6px) translateY(-40px);
+        position: relative;
+    }
+
+
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
     /* ... */
-
+    .main-container {
+        margin: 0;
+        padding: 0;
+    }
 
     header {
-        flex-direction: column;
-    }
-
-
-    nav {
-        transform: translateX(-18%);
-        position: relative;
+        display: block;
 
     }
 
-    nav ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
+    .logo-head {
+        margin: 22px auto;
 
     }
 
 
-    nav button {
-        background-color: transparent;
-        border: none;
-        font-size: 16px;
-        width: 187.5px;
-        height: 19px;
-        gap: 0px;
-        opacity: 0px;
+    nav li {
+        text-align: center;
+        border-bottom: 2px solid transparent;
+        width: 100%;
     }
 
+    nav li:hover {
 
-    nav li:first-child::before {
-        content: "";
-        width: 80%;
-        height: 3px;
-        position: absolute;
-        background-color: var(--filter-bg-color);
-        transform: translateY(30px) translateX(-1%) rotate(180deg);
         transition: 0.3s;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid var(--main-color);
+
     }
-
-    nav li:last-child::before {
-        content: "";
-        width: 80%;
-        height: 3px;
-        position: absolute;
-        background-color: var(--filter-bg-color);
-        transform: translateY(30px) translateX(-1%) rotate(180deg);
-        transition: 0.3s;
-    }
-
-    /* ********c'est pour éfacer le 1er barre ************** */
-    nav button:hover::before {
-        content: "";
-        width: 80%;
-        height: 3px;
-        position: absolute;
-        background-color: transparent;
-        transform: translateY(30px) translateX(-1%) rotate(180deg);
-        transition: 0.3s;
-    }
-
-    nav li:hover:first-child::before {
-        content: "";
-        width: 80%;
-        height: 3px;
-        position: absolute;
-        background-color: var(--main-color);
-        transform: translateY(30px) translateX(-1%) rotate(180deg);
-        transition: 0.3s;
-    }
-
-    nav li:hover:last-child::before {
-        content: "";
-        width: 80%;
-        height: 3px;
-        position: absolute;
-        background-color: var(--main-color);
-        transform: translateY(30px) translateX(-1%) rotate(180deg);
-        transition: 0.3s;
-    }
-
-
-
 
     .headline h1 {
         font-size: 22px;
@@ -702,11 +687,12 @@ footer {
     }
 
     section .Info-group {
-        margin-top: 30px;
+        margin: 30px 0 0 10px;
     }
 
 
     /* **************************** */
+
     .search-bar-contener {
         text-wrap: nowrap;
     }
@@ -738,31 +724,128 @@ footer {
     /* ******************** */
     .filterbar {
         display: flex;
-
+        justify-content: space-around;
     }
-
-
 
     .filterbarc ul {
         flex-wrap: wrap;
+        justify-content: center;
+
     }
 
-    .bes {
+    .filterbarc p {
+
+        position: relative;
+        transform: translateX(5px) translateY(-40px);
+
+    }
+
+    /* ********************************** */
+    .hebergements-and-populaires {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column-reverse;
+        width: 100%;
 
     }
 
 
+    .hebergements-and-populaires section {
+        background-color: white;
+    }
 
-    .filterbarc button {
-        width: Fill (162.5px)px;
-        height: Fixed (50px)px;
-        padding: 4px 19px 4px 19px;
-        gap: 10px;
-        border-radius: 25px;
-        border: 2px 0px 0px 0px;
-        opacity: 0px;
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+    }
+
+    .card {
+        width: 340%;
+    }
+
+    .hebergements {
+        padding-left: 0px;
+    }
+
+    .hebergements-title {
+        background-color: white;
+    }
+
+    .offers-container {
+        display: grid;
+        grid-template-columns: repeat(1, 6fr);
+        grid-template-rows: auto;
+        background-color: white;
+        gap: 25px;
+        justify-items: center;
+    }
+
+    .main-card {
+        max-width: 100%;
+        width: 100%;
+
+    }
+
+    .farm {
+        width: 100%;
+
+    }
+
+    .main-card img {
+        max-width: 100%;
+        max-height: 100%;
+        width: 6800px;
+
+        object-fit: cover;
+
+    }
+
+    /* **************************** */
+
+    .activm {
+        padding: 20px 0;
+    }
+
+
+    .activ-container {
+        display: grid;
+        grid-template-columns: repeat(1, 4fr);
+
+        gap: 15px;
+
+        justify-items: center;
+
+    }
+
+
+    .farm {
+        width: 100%;
+
+        max-width: 250px;
+
+        text-align: center;
+
+    }
+
+    .farm img {
+        width: 100%;
+
+        height: auto;
+        object-fit: cover;
+
+    }
+
+    /* ********************************************* */
+    footer {
+        background-color: var(--main-bg-color);
+    }
+
+    .footerc {
+        padding: 0 0 0px 20px;
+        flex-direction: column;
 
     }
 
