@@ -120,7 +120,7 @@ nav li:hover {
     display: flex;
     border: 1px black;
     border-radius: 15px;
-    width: 377px;
+
     height: 49px;
     border-radius: 15px 0px 0px 0px;
     border: 1px 0px 0px 0px;
@@ -447,11 +447,13 @@ a {
 
 
 /* ***********************Activité à Marseille****************************** */
+
 .activ-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    justify-items: start;
+    justify-items: center;
+    align-items: center;
 
 }
 
@@ -489,10 +491,9 @@ a {
 }
 
 .activm {
-    max-width: 1200px;
-    /* Vérifiez si cette propriété limite la largeur */
+
     margin: 0 auto;
-    /* Assurez-vous que les marges ne restreignent pas la largeur */
+
 }
 
 /* *******************************footer********************* */
@@ -822,18 +823,17 @@ footer {
 
 
     .farm {
-        width: 100%;
-
-        max-width: 250px;
-
+        width: 630px;
+        max-width: 100%;
         text-align: center;
 
     }
 
-    .farm img {
-        width: 100%;
-
-        height: auto;
+    .farm .ia {
+        width: 1500px;
+        max-width: 98%;
+        height: 100px;
+        max-height: 100%;
         object-fit: cover;
 
     }
