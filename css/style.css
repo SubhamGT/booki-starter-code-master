@@ -38,7 +38,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
 }
 
 .logo-head {
@@ -96,11 +96,7 @@ nav li:hover {
 
 
 
-
 /* ************titre****************** */
-.Info-group {
-    padding-left: 5px;
-}
 
 .headline h1 {
     margin: 0 0 -12px 0;
@@ -113,14 +109,14 @@ nav li:hover {
 
 .Search-bar {
     display: flex;
-    border-radius: 15px
+    border-radius: 15px;
+
 }
 
 .search-bar-contener {
     display: flex;
     border: 1px black;
     border-radius: 15px;
-
     height: 49px;
     border-radius: 15px 0px 0px 0px;
     border: 1px 0px 0px 0px;
@@ -166,9 +162,8 @@ input[type="text"]:focus::placeholder {
 
 }
 
-input[type="submit"] {
-    padding: 15px 16px;
-    gap: 10px;
+.button-text {
+    padding: 12px 19px;
     border-radius: 0px 15px 15px 0px;
     background: rgba(0, 101, 252, 1);
     border: 1px solid rgba(0, 101, 252, 1);
@@ -179,9 +174,13 @@ input[type="submit"] {
     line-height: 21.13px;
     text-align: center;
     cursor: pointer;
+    margin-left: -7px;
 }
 
+.search-button i.fas.fa-search {
+    display: none;
 
+}
 
 .search-bar-contener .fa-solid {
     color: rgba(0, 0, 0, 1);
@@ -200,13 +199,14 @@ input[type="submit"] {
     font-weight: bold;
     width: 100%;
     height: auto;
-    margin-top: 10px;
+
+    margin-bottom: 12px;
 }
 
 
 .filterbar ul {
     display: flex;
-
+    justify-content: space-around;
     align-items: center;
     list-style: none;
     padding: 4px 19px 4px 0px;
@@ -224,10 +224,11 @@ input[type="submit"] {
     background-color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 10px 0;
     text-wrap: nowrap;
-    width: 200px;
+    width: 180px;
     min-width: 120px;
+
 }
 
 
@@ -238,9 +239,7 @@ input[type="submit"] {
 
 .filterbar p {
     font-size: 18px;
-    font-weight: 700;
-    line-height: 21.13px;
-    text-align: center;
+    margin-bottom: 5px;
 
 }
 
@@ -251,7 +250,7 @@ input[type="submit"] {
 }
 
 .infobar {
-    margin: -20px 0 25px;
+    margin: -20px 0 15px;
 }
 
 .infobarcontener {
@@ -309,7 +308,8 @@ a {
 }
 
 .card-title {
-    font-size: 16px;
+    font-weight: 16px;
+    margin: 1px;
 }
 
 .euro {
@@ -375,14 +375,14 @@ a {
     object-fit: center/cover;
     border-radius: 20px 20px 0 0;
     border: 5px solid transparent;
-    padding: 5px;
+    padding: 2px 2px 0px 2px;
     box-sizing: border-box;
 }
 
 
 
 .main-c {
-    padding: 0 15px 0 15px;
+    padding: 0 15px 10px 15px;
     gap: 8px;
 }
 
@@ -448,19 +448,31 @@ a {
 
 /* ***********************Activité à Marseille****************************** */
 
+.activm {
+    width: 100%;
+}
+
 .activ-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    justify-items: center;
     align-items: center;
+    padding: 0;
 
+}
+
+.activm-txt {
+    padding: 20px 0 10px;
 }
 
 .farm {
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
-    max-width: 250px;
+    max-width: 280px;
+}
+
+.farmt {
+    font-size: 1rem;
 }
 
 .ia {
@@ -473,9 +485,10 @@ a {
 
 
 .farm .ia {
-    object-fit: center/cover;
-    max-width: 255px;
-    height: 352px;
+    object-fit: cover;
+    max-width: 280px;
+    max-height: 100%;
+    height: 360px;
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
 }
@@ -491,27 +504,34 @@ a {
 }
 
 .activm {
-
     margin: 0 auto;
-
 }
 
+
+
 /* *******************************footer********************* */
+
+
 footer {
     margin: 50px 0 0;
 }
 
 .footerc {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 18% 0 1%;
     background: rgba(242, 242, 242, 1);
+    flex-wrap: nowrap;
 }
+
+
 
 .tf {
     width: 77px;
     height: 21px;
     white-space: nowrap;
 }
+
 
 .ulc ul {
     list-style: none;
@@ -538,6 +558,10 @@ footer {
         margin: 0;
         padding: 0;
     }
+
+
+
+
 
     .hebergements-and-populaires {
         flex-direction: column;
@@ -574,48 +598,52 @@ footer {
     /* **************** */
     .activ-container {
         justify-items: normal;
+
+    }
+
+    .farm {
+        border-radius: 5% 5%
     }
 
     .farm .ia {
         width: 100%;
         height: auto;
         max-width: 250px;
-        height: 230px;
-        border-radius: 5% 5% 0 0;
+        height: 190px;
+
 
     }
 
     .farm img {
         width: 100%;
-        border-radius: 5% 5% 0 0;
+
         opacity: 1;
     }
+
+
 
     .activmt {
         text-wrap: wrap;
         border-radius: 0 0 5% 5%;
         overflow: hidden;
-        min-height: 90px;
+
         display: flex;
         align-items: center;
 
     }
 
-    .bes {
-        width: 0;
-
+    .filterbar {
+        margin-top: -10px;
     }
+
+
 
     .filterbarc ul {
         flex-wrap: wrap;
-        padding: 10px 0 0 0;
-        gap: 0;
+        margin-right: 10%;
 
     }
 
-    .filterbarc li {
-        margin: 0px 10px 25px -5px;
-    }
 
     .filterbarc {
         max-width: 100%;
@@ -630,8 +658,9 @@ footer {
     }
 
     .filterbarc p {
-        transform: translateX(6px) translateY(-40px);
-        position: relative;
+        width: 900px;
+        max-width: 100%;
+        padding-right: 100%;
     }
 
 
@@ -649,7 +678,7 @@ footer {
 
     header {
         display: block;
-
+        padding: 0;
     }
 
     .logo-head {
@@ -660,7 +689,8 @@ footer {
 
     nav li {
         text-align: center;
-        border-bottom: 2px solid transparent;
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
         width: 100%;
     }
 
@@ -688,7 +718,7 @@ footer {
     }
 
     section .Info-group {
-        margin: 30px 0 0 10px;
+        margin: 0px 0 0 25px;
     }
 
 
@@ -706,26 +736,32 @@ footer {
         text-align: center;
     }
 
-    input[type="submit"] {
+    .search-button .button-text {
+        display: none;
+        border-radius: 15px;
+    }
+
+    .search-button i.fas.fa-search {
+        display: inline-block;
+        margin-left: -5px;
         width: 49px;
         height: 49px;
-        left: 286px;
-        padding: 17px 17px;
+        padding: 18px;
         gap: 10px;
+
         border-radius: 15px;
         border: 1px solid transparent;
         opacity: 0px;
-        background: url(./Vector.png) center/30px no-repeat;
         background-color: #0065FC;
-        background-size: 17px;
-        padding-left: 0;
-        text-indent: -9999px;
+        color: white;
+
     }
+
 
     /* ******************** */
     .filterbar {
         display: flex;
-        justify-content: space-around;
+
     }
 
     .filterbarc ul {
@@ -734,19 +770,19 @@ footer {
 
     }
 
-    .filterbarc p {
-
-        position: relative;
-        transform: translateX(5px) translateY(-40px);
-
+    .filterbarc li {
+        max-width: 100%;
     }
+
+
+
+
 
     /* ********************************** */
     .hebergements-and-populaires {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
-
     }
 
 
@@ -754,13 +790,15 @@ footer {
         background-color: white;
     }
 
+    .hebergements-and-populaires .populaires {
+        background-color: var(--main-bg-color);
+        border-radius: 0;
+    }
 
     .populaires-cards {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-
     }
 
     .card {
@@ -799,40 +837,37 @@ footer {
         max-width: 100%;
         max-height: 100%;
         width: 6800px;
-
         object-fit: cover;
-
     }
 
     /* **************************** */
 
     .activm {
-        padding: 20px 0;
+        padding: 20px 20px;
+
     }
 
 
     .activ-container {
         display: grid;
         grid-template-columns: repeat(1, 4fr);
-
         gap: 15px;
-
         justify-items: center;
 
     }
 
 
     .farm {
-        width: 630px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 640px;
         text-align: center;
-
+        border-radius: 9px;
     }
 
     .farm .ia {
-        width: 1500px;
+        width: 700px;
         max-width: 98%;
-        height: 100px;
+        height: 90px;
         max-height: 100%;
         object-fit: cover;
 
@@ -844,7 +879,7 @@ footer {
     }
 
     .footerc {
-        padding: 0 0 0px 20px;
+        padding: 0 0 0px 25px;
         flex-direction: column;
 
     }
