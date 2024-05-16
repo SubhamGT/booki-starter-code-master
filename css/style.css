@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-
     overflow-y: auto;
 }
 
@@ -84,7 +83,6 @@ nav button:hover {
 
 
 nav li:hover {
-
     transition: 0.3s;
     border-top: 2px solid var(--main-color);
 
@@ -128,8 +126,6 @@ nav li:hover {
     border: rgb(242, 242, 242, 1) solid 1px
 }
 
-
-
 input {
     border: none;
     outline: none;
@@ -152,7 +148,6 @@ input::placeholder {
 
 input[type="text"]:focus::placeholder {
     color: transparent;
-
 }
 
 .button-text {
@@ -186,25 +181,25 @@ input[type="text"]:focus::placeholder {
 
 
 .filterbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
     align-items: center;
     font-size: 1rem;
     font-weight: bold;
-    width: 100%;
-    height: auto;
-
+    max-width: 65%;
     margin-bottom: 12px;
+  width: 100%;
 }
 
-
 .filterbar ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: baseline;
+    gap: 15px;
+    margin: 10px auto;
+    padding: 0;
     list-style: none;
-    padding: 4px 19px 4px 0px;
-    gap: 10px;
-    border-radius: 25px 0px 0px 0px;
+    margin-bottom: 18px;
 }
 
 
@@ -219,8 +214,9 @@ input[type="text"]:focus::placeholder {
     font-weight: bold;
     padding: 10px 0;
     text-wrap: nowrap;
-    width: 180px;
-    min-width: 120px;
+    width: 100%;
+    min-width: 180px;
+    max-width: 100%;
 
 }
 
@@ -339,7 +335,6 @@ a {
 .hebergements {
     width: 65%;
     margin: 0 auto;
-
 }
 
 .offers-container {
@@ -551,10 +546,6 @@ footer {
         padding: 0;
     }
 
-
-
-
-
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -624,39 +615,33 @@ footer {
 
     }
 
-    .filterbar {
-        margin-top: -10px;
-    }
-
-
-
-    .filterbarc ul {
-        flex-wrap: wrap;
-        margin-right: 10%;
-
-    }
-
-
     .filterbarc {
+        margin-top: -10px;
+        width: 15px;
         max-width: 100%;
         max-height: 100%;
     }
+
+
 
     .filterbarc button {
         flex-wrap: nowrap;
         margin: 0;
         box-sizing: border-box;
+        min-width: 160px;
 
     }
 
-    .filterbarc p {
-        width: 900px;
-        max-width: 100%;
-        padding-right: 100%;
+    .filterbar ul {
+        gap: 8px;
+        
     }
 
+    .filterbar li:nth-child(1) {
+        grid-column: span 5; 
+        grid-row: 1; 
 
-
+    }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -675,7 +660,6 @@ footer {
 
     .logo-head {
         margin: 22px auto;
-
     }
 
 
@@ -687,7 +671,6 @@ footer {
     }
 
     nav li:hover {
-
         transition: 0.3s;
         border-top: 2px solid transparent;
         border-bottom: 2px solid var(--main-color);
@@ -749,22 +732,25 @@ footer {
 
 
     /* ******************** */
+    
     .filterbar {
-        display: flex;
-
-    }
-
-    .filterbarc ul {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(1, 1fr);
         justify-content: center;
-
+ 
     }
 
-    .filterbarc li {
-        max-width: 100%;
+          
+   
+    .filterbar ul {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto auto; 
     }
-
-
+    
+  
+    .filterbar li:nth-child(1) {
+        grid-column: span 2; 
+        grid-row: 1; 
+    }
 
 
 
@@ -849,18 +835,21 @@ footer {
 
     .farm {
         width: 100%;
-        max-width: 640px;
+        max-width: 320px;
         text-align: center;
-        border-radius: 9px;
+        border-radius: 17px;
     }
 
     .farm .ia {
         width: 700px;
         max-width: 98%;
-        height: 90px;
+        height: 130px;
         max-height: 100%;
         object-fit: cover;
+    }
 
+    .activmt{
+        border-radius: 17px;
     }
 
     /* ********************************************* */
