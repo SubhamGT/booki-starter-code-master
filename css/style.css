@@ -122,7 +122,7 @@ nav li:hover {
     width: 50px;
     height: 49px;
     gap: 0;
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px;
     border: rgb(242, 242, 242, 1) solid 1px
 }
 
@@ -702,7 +702,19 @@ footer {
     .search-bar-contener {
         text-wrap: nowrap;
     }
+    .search-bar-contener button{
+        border-radius: 15px  0  0 15px;
+    }
+.recherche-container {
+    width: 100%;
 
+}
+.recherche{
+   width: 265px;
+
+}
+
+  
     input[name="q"] {
         font-family: Raleway;
         font-size: 80%;
@@ -713,23 +725,32 @@ footer {
 
     .search-button .button-text {
         display: none;
-        border-radius: 15px;
+        
     }
 
     .search-button i.fas.fa-search {
         display: inline-block;
-        margin-left: -5px;
-        width: 49px;
-        height: 49px;
+        width: 50px;
+        height: 50px;
         padding: 18px;
+        margin-bottom: 50px;
         gap: 10px;
         border-radius: 15px;
         border: 1px solid transparent;
         background-color: #0065FC;
         color: white;
-
+margin-left:60px;
     }
 
+    .search-bar-contener {
+        border-radius: 15px;
+    }
+
+    .search-bar-contener button:last-child{
+      
+        background-color: white;
+        border: none;
+    }
 
     /* ******************** */
     
