@@ -52,6 +52,7 @@ header {
 
 nav {
     padding: 0px 0px 40px 0px;
+    
 }
 
 nav ul {
@@ -63,30 +64,33 @@ nav ul {
     padding: 0;
 }
 
-nav button {
-    background-color: transparent;
-    border: none;
-    width: 126px;
-    font-size: 15px;
-}
-
 nav li {
+    background-color: transparent;
+    width: 130px;
+    font-size: 15px;
     border-top: 2px solid transparent;
     padding-top: 20px;
-
+    text-align: center;
+    box-sizing: border-box; 
 }
 
-nav button:hover {
+nav a {
+    text-decoration: none;
+    color: inherit; 
+    display: block; 
+    padding: 10px 0; 
+}
+
+nav a:hover {
     transition: 0.3s;
     color: var(--main-color);
 }
 
-
 nav li:hover {
     transition: 0.3s;
     border-top: 2px solid var(--main-color);
-
 }
+
 
 
 
@@ -112,7 +116,7 @@ nav li:hover {
     display: flex;
     border: black 1px;
     border-radius: 15px;
-    height: 49px;
+
     border-radius: 15px 0 0 0;
     background: rgb(255, 255, 255, 1);
     border: rgb(242, 242, 242, 1) solid 1px;
@@ -833,7 +837,7 @@ margin-left:60px;
     .main-card img {
         max-width: 100%;
         max-height: 100%;
-        width: 6800px;
+        width: 6900px;
         object-fit: cover;
     }
 
@@ -858,13 +862,14 @@ margin-left:60px;
         width: 100%;
         max-width: 320px;
         text-align: center;
-        border-radius: 17px;
+        border-radius: 250px;
     }
 
     .farm .ia {
         width: 700px;
-        max-width: 98%;
-        height: 130px;
+        border: none;
+        max-width: 100%;
+        height: 135px;
         max-height: 100%;
         object-fit: cover;
     }
